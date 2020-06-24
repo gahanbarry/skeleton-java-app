@@ -12,12 +12,12 @@ public class QueryProcessorTest {
 
   @Test
   public void knowsWhoWroteRomeoAndJuliet() throws Exception {
-    assertThat(queryProcessor.process("Who wrote Romeo And Juliet"), containsString("Shakespeare"));
+    assertThat(queryProcessor.process("Who wrote Romeo And Juliet"), containsString("Marlowe"));
   }
 
   @Test
   public void isNotCaseSensitive() throws Exception {
-    assertThat(queryProcessor.process("who wrote romeo and juliet"), containsString("Shakespeare"));
+    assertThat(queryProcessor.process("who wrote romeo and juliet"), containsString("Marlowe"));
   }
 
   @Test
